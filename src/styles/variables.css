@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root{
+    /* ==========================
+     COLORS
+  ========================== */
+
+  /* Backgrounds */
+  --clr-background: #F8F6F2;
+  --clr-surface: #FFFFFF;
+  --clr-surface-alt: #F1F3F5;
+
+  /* Text */
+  --clr-text-primary: #1C1C1C;
+  --clr-text-secondary: #525252;
+  --clr-text-muted: #a29f9f;
+
+  /* Brand */
+  --clr-primary: #1D4ED8;
+  --clr-primary-hover: #1E40AF;
+
+  /* Supporting */
+  --clr-success: #15803D;
+  --clr-highlight: #D97706;
+  --clr-error: #DC2626;
+
+  /* Borders */
+  --clr-border: #DDDDDD;
+  --clr-border-hover: #BDBDBD;
+
+  /* Shadow */
+  --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+
+  /* translate */
+  --default-transfom: translateY(4px);
+  --default-transition: .4s;
+
+
+
+  /* ==========================
+     TYPOGRAPHY
+  ========================== */
+
+  /* Font Family */
+  --font-heading: "Space Grotesk", sans-serif;
+  --font-body: "Inter", sans-serif;
+
+  /* Font Weights */
+  --fw-normal: 400;
+  --fw-bold: 700; }

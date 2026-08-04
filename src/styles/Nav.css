@@ -1,0 +1,53 @@
+.nav-container{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    font-weight: var(--fw-normal);
+    font-family: var(--font-heading);
+    font-size: 20px;
+    color: var(--clr-text-primary);
+    background-color: var(--clr-background);
+    position: sticky;
+    top: 0;
+}
+
+.nav-container strong{
+    color: var(--clr-text-muted);
+    font-weight: var(--fw-bold);
+    font-style: italic;
+    cursor: pointer;
+}
+
+.nav-content{
+    display: flex;
+    gap: 40px;
+    font-weight: var(--fw-bold);
+    opacity: .85;
+    margin-right: 120px;
+
+}
+
+.about:hover, .projects:hover, .contact:hover{
+    color: var(--clr-primary);
+    cursor: pointer;
+    transform: var(--default-transfom);
+    transition: var(--default-transition);
+}
+
+.nav-icons{
+    font-size: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.github, .twitter{
+    color: var(--clr-text-muted);
+}
+
+.github:hover, .twitter:hover{
+    color: var(--clr-primary);
+    cursor: pointer;
+    transform: var(--default-transfom);
+    transition: var(--default-transition);
+}
