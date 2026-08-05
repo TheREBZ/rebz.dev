@@ -1,0 +1,110 @@
+.hero-main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
+  padding: 50px;
+  background-color: var(--clr-surface-alt);
+}
+
+h1{
+    font-family: var(--font-heading);
+    font-size: 40px;
+    font-weight: var(--fw-bold);
+    color: var(--clr-text-primary);
+}
+
+h5{
+    display: inline-flex;
+    align-items: center;
+    padding: .6rem 1rem;
+    /* border-radius: 999px; */
+    color: var(--clr-primary);
+    /* color: var(--clr-surface); */
+    /* border: 1px solid var(--clr-border); */
+    font-size: .9rem;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.hero-text-container p {
+    font-family: var(--font-body);
+    font-weight: var(--fw-normal);
+    color: var(--clr-text-secondary);
+    width: 600px;
+    opacity: 0;
+    font-size: 16px;
+    transform: translateY(-20px);
+    animation: revealHeroText 1s ease forwards;
+}
+
+.hero-text-container{
+    display: flex;
+    flex-direction: column;
+    font-size: 18px;
+    font-family: var(--font-body);
+    gap: 50px;
+    background-color: var(--clr-surface-alt);
+    text-align: center;
+    max-width: 700px;
+}
+
+.hero-title{
+    overflow: hidden;
+}
+
+.hero-title span{
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(30px);
+    clip-path: inset(0 100% 0 0);
+    animation: revealHeroTitle 1.5s ease forwards;
+}
+
+.hero-text-container h1{
+    color: var(--clr-primary);
+    font-size: 60px;
+}
+
+.hero-buttons-container{
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.hero-buttons-container button{
+    padding: 10px 20px;
+    font-family: var(--font-body);
+    font-weight: var(--fw-bold);
+    cursor: pointer;
+    border: 2px solid var(--clr-text-secondary);
+    border-radius: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealHeroText 1.4s ease forwards;
+}
+
+.hero-buttons-container button:hover{
+    background-color: var(--clr-primary);
+    color: var(--clr-surface);
+    transform: var(--default-transfom);
+    transition: var(--default-transition);
+    border: 2px solid var(--clr-primary);
+}
+
+@keyframes revealHeroTitle {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        clip-path: inset(0 0 0 0);
+    }
+    
+}
+@keyframes revealHeroText {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        
+    }
+    
+}

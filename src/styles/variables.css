@@ -19,6 +19,7 @@
   /* Brand */
   --clr-primary: #1D4ED8;
   --clr-primary-hover: #1E40AF;
+  --clr-hero-glow: rgba(29, 78, 216, 0.08);
 
   /* Supporting */
   --clr-success: #15803D;
@@ -34,7 +35,7 @@
 
   /* translate */
   --default-transfom: translateY(4px);
-  --default-transition: .4s;
+  --default-transition: .4s ease;
 
 
 
@@ -47,5 +48,5 @@
   --font-body: "Inter", sans-serif;
 
   /* Font Weights */
-  --fw-normal: 400;
+  --fw-normal: 300;
   --fw-bold: 700; }

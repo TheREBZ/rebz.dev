@@ -10,7 +10,7 @@ import {
 const Nav = () => {
   return (
       <nav className="nav-container">
-          <h1>OSAZUWA KELVIN <strong>[REBZ]</strong></h1>
+          <h1 className="nav-home">OSAZUWA KELVIN <strong>[REBZ]</strong></h1>
 
           <div className="nav-content">
             <p className="about">About</p>
