@@ -13,9 +13,9 @@ const Nav = () => {
           <h1 className="nav-home">OSAZUWA KELVIN <strong>[REBZ]</strong></h1>
 
           <div className="nav-content">
-            <p className="about">About</p>
-            <p className="projects">Projects</p>
-            <p className="contact">Contact</p>
+            <a href="#about" className="about">About</a>
+            <a href="" className="projects">Projects</a>
+            <a href="" className="contact">Contact</a>
           </div>
 
           <nav className="nav-icons">

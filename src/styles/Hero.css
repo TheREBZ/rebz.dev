@@ -7,31 +7,25 @@
   background-color: var(--clr-surface-alt);
 }
 
-h1{
-    font-family: var(--font-heading);
+/* h1{
     font-size: 40px;
     font-weight: var(--fw-bold);
     color: var(--clr-text-primary);
-}
+} */
 
 h5{
     display: inline-flex;
     align-items: center;
-    padding: .6rem 1rem;
-    /* border-radius: 999px; */
     color: var(--clr-primary);
-    /* color: var(--clr-surface); */
-    /* border: 1px solid var(--clr-border); */
-    font-size: .9rem;
+    font-size: 14px;
     justify-content: center;
     cursor: pointer;
 }
 
 .hero-text-container p {
-    font-family: var(--font-body);
     font-weight: var(--fw-normal);
     color: var(--clr-text-secondary);
-    width: 600px;
+    width: 720px;
     opacity: 0;
     font-size: 16px;
     transform: translateY(-20px);
@@ -56,9 +50,11 @@ h5{
 .hero-title span{
     display: inline-block;
     opacity: 0;
+    color: var(--clr-primary);
     transform: translateY(30px);
     clip-path: inset(0 100% 0 0);
     animation: revealHeroTitle 1.5s ease forwards;
+    /* color: var(--clr-text-secondary); */
 }
 
 .hero-text-container h1{
@@ -68,12 +64,13 @@ h5{
 
 .hero-buttons-container{
     display: flex;
-    gap: 30px;
+    gap: 20px;
     justify-content: center;
+    /* padding-right: 100px; */
 }
 
 .hero-buttons-container button{
-    padding: 10px 20px;
+    padding: 10px 10px;
     font-family: var(--font-body);
     font-weight: var(--fw-bold);
     cursor: pointer;

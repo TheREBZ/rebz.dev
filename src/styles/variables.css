@@ -1,25 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Manrope:wght@200..800&family=Space+Grotesk:wght@300..700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Space+Grotesk:wght@300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&family=Space+Grotesk:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Inter:wght@300;400;700&family=Space+Grotesk:wght@300;400;700&display=swap');
 
-:root{
-    /* ==========================
+:root {
+
+  /* ==========================
      COLORS
   ========================== */
 
   /* Backgrounds */
-  --clr-background: #F8F6F2;
-  --clr-surface: #FFFFFF;
-  --clr-surface-alt: #F1F3F5;
+  --clr-background: #B7C9E2;
+  --clr-surface: #F8FAFC;
+  --clr-surface-alt: #A9C4E4;
 
   /* Text */
-  --clr-text-primary: #1C1C1C;
-  --clr-text-secondary: #525252;
-  --clr-text-muted: #a29f9f;
+  --clr-text-primary: #18202B;
+  --clr-text-secondary: #354052;
+  --clr-text-muted: #55779E;
 
   /* Brand */
-  --clr-primary: #1D4ED8;
-  --clr-primary-hover: #1E40AF;
-  --clr-hero-glow: rgba(29, 78, 216, 0.08);
+  --clr-primary: #315F91;
+  --clr-primary-hover: #24486F;
+  --clr-hero-glow: rgba(49, 95, 145, 0.12);
 
   /* Supporting */
   --clr-success: #15803D;
@@ -27,26 +28,37 @@
   --clr-error: #DC2626;
 
   /* Borders */
-  --clr-border: #DDDDDD;
-  --clr-border-hover: #BDBDBD;
+  --clr-border: #91A8C2;
+  --clr-border-hover: #6684A5;
 
   /* Shadow */
-  --shadow: 0 10px 30px rgba(0, 0, 0, .08);
+  --shadow: 0 10px 30px rgba(24, 32, 43, 0.10);
 
-  /* translate */
-  --default-transfom: translateY(4px);
+
+  /* ==========================
+     ANIMATION
+  ========================== */
+
+  --default-transform: translateY(4px);
   --default-transition: .4s ease;
 
+/* ==========================
+   LAYOUT
+========================== */
+
+--container-width: 1100px;
+--section-padding: 100px;
 
 
   /* ==========================
      TYPOGRAPHY
   ========================== */
 
-  /* Font Family */
+  /* Font Families */
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
 
   /* Font Weights */
   --fw-normal: 300;
-  --fw-bold: 700; }
+  --fw-bold: 700;
+}

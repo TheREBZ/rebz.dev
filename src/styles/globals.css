@@ -5,7 +5,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-/* .test{
-    background-color: var(--dark-charcoal);
-    font-family: var(--body-font);
-} */
+ h1{
+    font-family: var(--font-heading);
+ }
+
+ h2{
+    font-family: var(--font-heading);
+    font-size: 32px;
+ }
+
+ p{
+    font-family: var(--font-body);
+ }
+
+ a{
+   text-decoration: none;
+   color: inherit;
+ }
+
+ html {
+   scroll-behavior: smooth;
+}

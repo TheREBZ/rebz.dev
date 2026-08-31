@@ -1,0 +1,182 @@
+.about-container{
+    background-color: var(--clr-surface-alt);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    gap: 25px;
+}
+
+.about-header{
+    color: var(--clr-text-secondary);
+}
+
+.about-container p{
+    text-align: center;
+    max-width: 1100px;
+    color: var(--clr-text-secondary);
+}
+
+.about-content{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-weight: var(--fw-normal);
+    transform: translateY(20px);
+    animation: revealAboutText 1.4s ease forwards;
+}
+
+.tech-stack {
+    width: 100%;
+    max-width: 850px;
+    margin: 0 auto;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tech-stack h2 {
+    text-align: center;
+    font-family: var(--font-heading);
+    font-size: 32px;
+    color: var(--clr-text-primary);
+
+    margin-bottom: 50px;
+}
+
+.tech-row {
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 40px;
+
+    margin-bottom: 55px;
+}
+
+.tech-row h3 {
+    width: 120px;
+    flex-shrink: 0;
+
+    text-align: right;
+
+    font-family: var(--font-heading);
+    font-size: 13px;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+
+    color: var(--clr-text-muted);
+}
+
+.tech-items {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    gap: 32px;
+
+    flex-wrap: wrap;
+}
+
+.skill {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    min-width: 70px;
+}
+
+.skill > span {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: var(--fw-bold);
+
+    color: var(--clr-text-primary);
+}
+
+.skill-bar {
+    width: 60px;
+    height: 12px;
+
+    background-color: var(--clr-border);
+
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.skill-progress {
+    height: 100%;
+    width: 0;
+
+    background-color: var(--clr-primary);
+
+    border-radius: inherit;
+}
+
+.skill-progress.animate {
+    animation: loadSkill 1.2s ease forwards;
+}
+
+
+/* bar limits */
+
+.html {
+    --skill-width: 95%;
+}
+
+.css {
+    --skill-width: 95%;
+}
+
+.javascript {
+    --skill-width: 85%;
+}
+
+.typescript {
+    --skill-width: 80%;
+}
+
+.react {
+    --skill-width: 90%;
+}
+
+.vite {
+    --skill-width: 90%;
+}
+
+.git {
+    --skill-width: 85%;
+}
+
+.figma {
+    --skill-width: 75%;
+}
+
+.api {
+    --skill-width: 85%;
+}
+
+@keyframes loadSkill {
+
+    from {
+        width: 0;
+    }
+
+    to {
+        width: var(--skill-width);
+    }
+
+}
+
+@keyframes revealAboutText {
+    to{
+        opacity: 1;
+        transform: translateY(0);
+        
+    }
+}

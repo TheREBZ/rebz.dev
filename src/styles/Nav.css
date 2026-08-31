@@ -4,15 +4,12 @@
     align-items: center;
     justify-content: space-around;
     font-family: var(--font-heading);
-    color: var(--clr-text-primary);
+    /* color: var(--clr-text-primary); */
     background-color: var(--clr-background);
     border: 1px solid var(--clr-border);
     position: sticky;
+    z-index: 100;
     top: 0;
-}
-
-.nav-container h1{
-    color: var(--clr-primary);
 }
 
 .nav-home{
@@ -20,10 +17,11 @@
     font-size: 20px;
     font-weight: var(--fw-bold); 
     cursor: pointer;
+    color: var(--clr-text-muted);
 }
 
 .nav-home strong{
-    color: var(--clr-text-muted);
+    color: var(--clr-text-secondary);
     font-weight: var(--fw-bold);
     font-style: italic;
     cursor: pointer;
@@ -31,7 +29,7 @@
 
 .nav-home strong:hover{
     color: var(--clr-primary-hover);
-    transform: var(--default-transfom);
+    transform: var(--default-transform);
     transition: var(--default-transition);
 }
 
@@ -42,6 +40,8 @@
     opacity: .85;
     margin-right: 120px;
     transition: all .4s ease, transform .4s ease;
+    text-decoration: none;
+    color: inherit;
 }
 
 .about, .projects, .contact{
@@ -87,7 +87,7 @@
 .github:hover, .twitter:hover{
     color: var(--clr-primary-hover);
     cursor: pointer;
-    transform: var(--default-transfom);
+    transform: var(--default-transform);
     transition: var(--default-transition);
     opacity: 1;
 }
