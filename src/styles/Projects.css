@@ -1,0 +1,470 @@
+.projects-container{
+    background-color: var(--clr-surface-alt);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 40px;
+    gap: 50px;
+}
+
+.featured-projects h3{
+    font-size: 14px;
+}
+
+.featured-projects {
+    width: 100%;
+    max-width: 1150px;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 35px;
+}
+
+.renexa {
+    width: 100%;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 60px;
+}
+
+.renexa-content {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
+.renexa-links{
+    padding-block: 20px;
+    display: flex;
+    gap: 20px;
+}
+
+.renexa-links a{
+    color: var(--clr-text-secondary);
+    font-weight: var(--fw-bold);
+}
+
+.renexa-tech{
+    display: flex;
+    gap: 15px;
+}
+
+.renexa-images {
+    width: 55%;
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+.renexa-slider {
+    width: 100%;
+    overflow: hidden;
+
+    border-radius: 18px;
+    border: 1px solid var(--clr-border);
+
+    background-color: var(--clr-surface);
+}
+
+.renexa-slider img {
+    width: 100%;
+    height: 360px;
+
+    display: block;
+
+    object-fit: cover;
+}
+
+.slider-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    gap: 18px;
+}
+
+.slider-controls button {
+    border: none;
+    background: none;
+
+    font-family: var(--font-heading);
+    font-size: 20px;
+
+    cursor: pointer;
+
+    color: var(--clr-text-secondary);
+}
+
+.slider-dots {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+
+    padding: 0;
+
+    border-radius: 50%;
+
+    background-color: var(--clr-border) !important;
+
+    transition:
+    width .35s ease,
+    height .35s ease,
+    border-radius .35s ease,
+    background-color .35s ease,
+    transform .35s ease;
+}
+
+.active-dot {
+    width: 22px;
+
+    border-radius: 20px;
+
+    background-color: var(--clr-primary) !important;
+
+    transform: scale(1.05);
+}
+
+.slide-image {
+    width: 100%;
+    height: 360px;
+
+    display: block;
+    object-fit: contain;
+
+    animation: slideFade 1.2s ease-in-out;
+}
+
+.renexa-slider {
+    overflow: hidden;
+}
+
+.featured-effect {
+    padding: 30px;
+
+    border: 1px solid transparent;
+    border-radius: 22px;
+
+    transition:
+        transform .45s ease,
+        background-color .45s ease,
+        border-color .45s ease,
+        box-shadow .45s ease;
+}
+
+@keyframes slideFade {
+    from {
+        opacity: 0;
+        transform: translateX(12px) scale(.99);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .featured-effect:hover {
+        /* transform: translateY(-6px) rotate(-0.3deg); */
+
+        background-color: var(--clr-primary);
+
+        border-color: var(--clr-border);
+
+
+        box-shadow: 0 18px 40px rgba(24, 32, 43, .08);
+    }
+
+    .featured-effect:hover .slider-controls > button {
+        color: white;
+        border-color: white;
+    }
+
+    .featured-effect:hover .dot {
+        background-color: rgba(255, 255, 255, .45) !important;
+    }
+    
+    .featured-effect:hover .active-dot {
+        background-color: white !important;
+    }
+
+    .featured-effect:hover h1,
+    .featured-effect:hover h2,
+    .featured-effect:hover h3,
+    .featured-effect:hover h4,
+    .featured-effect:hover p,
+    .featured-effect:hover li{
+        color: var(--clr-surface-alt);
+    }
+    .featured-effect:hover a{
+        color: var(--clr-surface);
+    }
+
+}
+
+/* =========================
+   PROJECTS MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .projects-container {
+        padding:
+            var(--section-padding)
+            var(--page-padding);
+
+        gap: 40px;
+    }
+
+    .projects-container > h2 {
+        width: 100%;
+        text-align: left;
+    }
+
+    .featured-projects {
+        gap: 24px;
+    }
+
+
+    /* FEATURE HEADING */
+
+    .feature-head {
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+    .feature-head h3 {
+        font-size: 12px;
+
+        letter-spacing: 1.5px;
+    }
+
+    .feature-head h1 {
+        font-size: clamp(36px, 10vw, 48px);
+
+        color: var(--clr-primary);
+    }
+
+    .feature-head p {
+        font-size: 14px;
+
+        line-height: 1.5;
+    }
+
+
+    /* PROJECT CARD */
+
+    .renexa {
+        width: 100%;
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 28px;
+    }
+
+    .featured-effect {
+        padding: 18px;
+
+        border-color: var(--clr-border);
+
+        background-color: var(--project-highlight-color);
+
+        border-radius: 20px;
+    }
+
+
+    /* IMAGE / SLIDESHOW */
+
+    .renexa-images {
+        width: 100%;
+
+        gap: 14px;
+    }
+
+    .renexa-slider {
+        width: 100%;
+
+        border-radius: 14px;
+    }
+
+    .renexa-slider img,
+    .slide-image {
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 16 / 10;
+
+        object-fit: contain;
+    }
+
+
+    /* SLIDER CONTROLS */
+
+    .slider-controls {
+        width: 100%;
+
+        gap: 12px;
+    }
+
+    .slider-controls > button {
+        width: 40px;
+        height: 40px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-shrink: 0;
+
+        border: 1px solid var(--clr-border);
+
+        border-radius: 50%;
+
+        font-size: 18px;
+    }
+
+    .slider-dots {
+        flex: 1;
+
+        justify-content: center;
+
+        gap: 6px;
+    }
+
+    .dot {
+        width: 6px;
+        height: 6px;
+        padding: 0;
+    }
+    
+    .active-dot {
+        width: 18px;
+        height: 6px;
+    }
+
+
+    /* PROJECT CONTENT */
+
+    .renexa-content {
+        width: 100%;
+
+        gap: 16px;
+    }
+
+    .renexa-content h4 {
+        margin-top: 4px;
+
+        font-size: 12px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 1.5px;
+    }
+
+    .renexa-content p,
+    .renexa-content li {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+    .renexa-content ul {
+        display: flex;
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding-left: 18px;
+    }
+
+
+    /* TECH */
+
+    .renexa-tech {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+    /* LINKS */
+
+    .renexa-links {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+
+        padding-block: 8px 0;
+    }
+
+    .renexa-links a {
+        min-height: 44px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        padding: 10px 14px;
+
+        border: 1px solid var(--clr-primary);
+
+        border-radius: 12px;
+
+        color: var(--clr-primary);
+
+        font-size: 14px;
+
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .featured-effect {
+        padding: 14px;
+    }
+
+    .feature-head h1 {
+        font-size: 38px;
+    }
+
+    .renexa {
+        gap: 24px;
+    }
+
+    .renexa-content {
+        gap: 14px;
+    }
+
+    .renexa-links {
+        grid-template-columns: 1fr;
+    }
+
+}
