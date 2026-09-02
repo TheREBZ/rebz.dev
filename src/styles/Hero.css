@@ -12,28 +12,6 @@
     background-color: var(--clr-surface-alt);
 }
 
-.hero-line {
-    display: inline-block;
-
-    opacity: 0;
-
-    transform: translateY(30px);
-
-    clip-path: inset(0 100% 0 0);
-
-    animation: revealHeroTitle 1.5s ease forwards;
-}
-
-.hero-really {
-    font-family: "DM Serif Display", serif;
-    font-style: italic;
-
-    color: var(--clr-primary);
-
-    font-size: 1.12em;
-    margin: 4px 0;
-}
-
 
 /* =========================
    HERO CONTENT
@@ -67,13 +45,37 @@
 
     color: var(--clr-primary);
 
-    overflow: hidden;
+    font-size: clamp(42px, 6vw, 60px);
+    line-height: 1.1;
 }
 
-.hero-text-container h1 {
-    font-size: clamp(42px, 6vw, 60px);
+.hero-line {
+    display: block;
 
-    line-height: 1.1;
+    width: fit-content;
+    max-width: 100%;
+
+    margin: 0 auto;
+
+    opacity: 0;
+
+    clip-path: inset(0 100% 0 0);
+
+    animation: revealHeroLine 1.5s ease forwards;
+}
+
+
+/* First line starts immediately */
+
+.hero-line-1 {
+    animation-delay: .1s;
+}
+
+
+/* Second line follows the first */
+
+.hero-line-2 {
+    animation-delay: .8s;
 }
 
 
@@ -87,16 +89,15 @@
 
     color: var(--clr-text-secondary);
 
-    font-size: 16px;
+    font-size: 18px;
     font-weight: var(--fw-normal);
-
     line-height: 1.7;
 
     opacity: 0;
 
-    transform: translateY(-20px);
+    transform: translateY(25px);
 
-    animation: revealHeroText 1s ease forwards;
+    animation: revealHeroText 1s ease .35s forwards;
 }
 
 
@@ -117,21 +118,24 @@
     font-family: var(--font-body);
     font-weight: var(--fw-bold);
 
+    border: 3px solid var(--clr-text-secondary);
     cursor: pointer;
 
-    border: 2px solid var(--clr-text-secondary);
     border-radius: 15px;
+
+    background-color: var(--project-highlight-color);
 
     opacity: 0;
 
-    transform: translateY(20px);
+    transform: translateY(25px);
 
-    animation: revealHeroText 1.4s ease forwards;
+    animation: revealHeroText 1s ease .55s forwards;
 
     transition:
         background-color .3s ease,
         color .3s ease,
-        border-color .3s ease;
+        border-color .3s ease,
+        transform .3s ease;
 }
 
 .hero-buttons-container button:hover {
@@ -140,6 +144,8 @@
     color: var(--clr-surface);
 
     border-color: var(--clr-primary);
+
+    transform: translateY(-2px);
 }
 
 
@@ -147,24 +153,36 @@
    ANIMATIONS
 ========================= */
 
-@keyframes revealHeroTitle {
+@keyframes revealHeroText {
+    from {
+        opacity: 0;
 
-    to {
-        opacity: 1;
-
-        transform: translateY(0);
-
-        clip-path: inset(0 0 0 0);
+        transform: translateY(25px);
     }
 
-}
-
-@keyframes revealHeroText {
-
     to {
         opacity: 1;
 
         transform: translateY(0);
+    }
+}
+
+/* =========================
+   HERO TITLE ANIMATION
+========================= */
+
+@keyframes revealHeroLine {
+
+    0% {
+        opacity: 1;
+
+        clip-path: inset(0 100% 0 0);
+    }
+
+    100% {
+        opacity: 1;
+
+        clip-path: inset(0 0 0 0);
     }
 
 }
@@ -185,17 +203,17 @@
         gap: 32px;
     }
 
-    .hero-text-container h1 {
+    .hero-title {
         font-size: clamp(38px, 11vw, 52px);
 
         line-height: 1.08;
+        text-align: center;
     }
 
     .hero-text-container p {
         max-width: 540px;
 
         font-size: 15px;
-
         line-height: 1.6;
     }
 
@@ -204,11 +222,9 @@
     }
 
     .hero-line {
-        display: block;
-    }
-    
-    .hero-line::after {
-        content: none;
+        width: 100%;
+        margin: 0;
+        text-align: center;
     }
 
 }
@@ -229,7 +245,7 @@
         gap: 28px;
     }
 
-    .hero-text-container h1 {
+    .hero-title {
         font-size: clamp(34px, 11vw, 44px);
     }
 
@@ -241,18 +257,6 @@
         min-height: 44px;
 
         padding: 10px 18px;
-    }
-
-}
-
-@media (min-width: 769px) {
-
-    .hero-line {
-        display: inline;
-    }
-
-    .hero-line::after {
-        content: " ";
     }
 
 }

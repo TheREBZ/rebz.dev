@@ -42,15 +42,15 @@ const Nav = () => {
 
       <div className="nav-content">
 
-        <a href="#about" className="about">
+        <a href="#about" className="nav-link">
           About
         </a>
 
-        <a href="#projects" className="projects">
+        <a href="#projects" className="nav-link">
           Projects
         </a>
 
-        <a href="#contact" className="contact">
+        <a href="#contact" className="nav-link">
           Contact
         </a>
 

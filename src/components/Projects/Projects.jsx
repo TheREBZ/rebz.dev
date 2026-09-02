@@ -12,6 +12,9 @@ import renexaReports from "../../assets/renexa-images/renexa-6.png";
 import renexaSettings from "../../assets/renexa-images/renexa-7.png";
 import renexaAdminEvents from "../../assets/renexa-images/renexa-8.png";
 import battleshipVideo from "../../assets/battleship-game.mp4";
+import adviceAppImage from "../../assets/side-projects/advice-app.png";
+import ecommerceImage from "../../assets/side-projects/e-commerce.png";
+import urlShortenerImage from "../../assets/side-projects/url-shortener.png";
 
 const Projects = () => {
 
@@ -225,7 +228,7 @@ const Projects = () => {
                 <div className="featured-project battleship featured-effect">
 
                     <div className="featured-media battleship-media reveal reveal-left reveal-delay-2">
-                        <div battleship-video-wrapper>                            
+                        <div className="battleship-video-wrapper">                            
                             <video
                                 className="battleship-video"
                                 src={battleshipVideo}
@@ -306,6 +309,81 @@ const Projects = () => {
 
 
             <div className="other-projects">
+                    <h2 className="other-projects-header">
+                        Other Projects
+                    </h2>
+                    <div className="projects">
+                        <div className="project-card link-shortener reveal project-reveal-left">
+                            <div className="project-card-image link-shortener-image">
+                                <img src={urlShortenerImage}/>
+                            </div>
+                            <div className="project-card-content link-shortener-content">
+                                <h4>URL Link Shortener</h4>
+                                <h4>Tech</h4>
+                                <p>React • JavaScript • CSS • Vite • Git • GitHub</p>
+                                <div className="project-card-links">
+                                    <a
+                                        href="https://github.com/TheREBZ/url-link-shortener-app.git"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        GitHub ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="project-card ecommerce reveal project-reveal-center project-delay-1">
+                            <div className="project-card-image ecommerce-image">
+                                <img src={ecommerceImage}/>
+                            </div>
+                            <div className="project-card-content ecommerce-content">
+                                <h4>E-Commerce Store</h4>
+                                <h4>Tech</h4>
+                                <p>HTML • CSS • JavaScript • Git • GitHub</p>
+                                <div className="project-card-links">
+                                    <a
+                                        href="https://github.com/TheREBZ/e-commerce-store.git"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        GitHub ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="project-card advice-app reveal project-reveal-right project-delay-2">
+                            <div className="project-card-image advice-app-image">
+                                <img src={adviceAppImage}/>
+                            </div>
+                            <div className="project-card-content advice-app-content">
+                                <h4>Advice Generator App</h4>
+                                <h4>Tech</h4>
+                                <p>HTML • CSS • JavaScript • REST API • Git • GitHub</p>
+                                <div className="project-card-links">
+                                    <a
+                                        href="https://github.com/TheREBZ/advice-generator.git"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        GitHub ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+            <div className="more-work reveal reveal-up">
+                <p>
+                    I’m usually always building something. You’ll find the rest here.
+                </p>
+                <a
+                    href="https://github.com/TheREBZ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="more-work-link"
+                >
+                    Visit My GitHub ↗
+                </a>
             </div>
 
         </main>

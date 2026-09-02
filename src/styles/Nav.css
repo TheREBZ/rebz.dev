@@ -76,9 +76,7 @@
     opacity: .85;
 }
 
-.about,
-.projects,
-.contact {
+.nav-link {
     position: relative;
 
     transition:
@@ -86,9 +84,7 @@
         opacity .4s ease;
 }
 
-.about::after,
-.projects::after,
-.contact::after {
+.nav-link::after {
     content: "";
 
     position: absolute;
@@ -107,15 +103,11 @@
     transition: transform .4s ease;
 }
 
-.about:hover::after,
-.projects:hover::after,
-.contact:hover::after {
+.nav-link:hover::after {
     transform: scaleX(1);
 }
 
-.about:hover,
-.projects:hover,
-.contact:hover {
+.nav-link:hover {
     color: var(--clr-primary-hover);
 
     opacity: 1;

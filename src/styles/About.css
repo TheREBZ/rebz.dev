@@ -10,6 +10,7 @@
 .about-container p{
     text-align: center;
     max-width: 1100px;
+    font-size: 17px;
 }
 
 .about-content{
@@ -196,6 +197,7 @@
 
     .about-content {
         width: 100%;
+        text-align: center;
 
         gap: 45px;
     }
@@ -306,7 +308,8 @@
     }
 
     .about-container p {
-        font-size: 14px;
+        font-size: 15px;
+        text-align: center;
     }
 
     .tech-stack h2 {

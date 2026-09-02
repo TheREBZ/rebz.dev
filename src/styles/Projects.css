@@ -382,6 +382,327 @@
 }
 
 
+/* OTHER PROJECTS */
+
+.other-projects{
+    width: 100%;
+    max-width: 1150px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.other-projects-header {
+    width: 100%;
+    color: var(--clr-primary);
+}
+
+/* =========================
+  OTHER PROJECT GRID
+========================= */
+.projects{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+/* =========================
+   OTHER PROJECT CARD
+========================= */
+
+.project-card {
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    overflow: hidden;
+
+    background-color: var(--project-highlight-color);
+
+    border: 1px solid var(--clr-border);
+    border-radius: 18px;
+
+    transition:
+        transform .35s ease,
+        border-color .35s ease,
+        box-shadow .35s ease;
+}
+
+/* =========================
+   OTHER PROJECT IMAGE
+========================= */
+
+.project-card-image {
+    width: 100%;
+
+    aspect-ratio: 16 / 10;
+
+    overflow: hidden;
+
+    background-color: var(--clr-background);
+    border-bottom: 1px solid var(--clr-border);
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition: transform .4s ease;
+}
+
+/* =========================
+  OTHER PROJECT CONTENT
+========================= */
+
+.project-card-content {
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+
+    padding: 22px;
+}
+
+.project-card-content h4:first-child {
+    margin-bottom: 10px;
+
+    color: var(--clr-text-primary);
+
+    font-size: 19px;
+}
+
+.project-card-content h4:not(:first-child) {
+    color: var(--clr-text-muted);
+
+    font-size: 11px;
+
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.project-card-content p {
+    color: var(--clr-text-secondary);
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* =========================
+   OTHER PROJECT CARD LINKS
+========================= */
+
+.project-card-links {
+    margin-top: auto;
+    padding-top: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 18px;
+}
+
+.project-card-links a {
+    width: fit-content;
+
+    color: var(--clr-text-secondary);
+
+    font-size: 13px;
+    font-weight: var(--fw-bold);
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+/* =========================
+   OTHER PROJECTS REVEAL
+========================= */
+
+.project-reveal-left {
+    opacity: 0;
+    transform:
+        translateX(-45px)
+        translateY(15px)
+        rotate(-1.5deg);
+}
+
+.project-reveal-center {
+    opacity: 0;
+    transform:
+        translateY(45px)
+        scale(.96);
+}
+
+.project-reveal-right {
+    opacity: 0;
+    transform:
+        translateX(45px)
+        translateY(15px)
+        rotate(1.5deg);
+}
+
+
+/* When IntersectionObserver adds .is-visible */
+
+.project-reveal-left.is-visible,
+.project-reveal-center.is-visible,
+.project-reveal-right.is-visible {
+    opacity: 1;
+
+    transform:
+        translateX(0)
+        translateY(0)
+        rotate(0)
+        scale(1);
+
+    transition:
+        opacity .75s ease,
+        transform .85s cubic-bezier(.2, .8, .2, 1);
+}
+
+
+/* Stagger */
+
+.project-delay-1 {
+    transition-delay: .12s !important;
+}
+
+.project-delay-2 {
+    transition-delay: .24s !important;
+}
+
+@media (hover: hover) and (pointer: fine) {
+
+    .project-card-links a:hover {
+        color: var(--clr-primary-hover);
+
+        transform: translateY(-2px);
+    }
+}
+
+/* =========================
+   MORE WORK
+========================= */
+
+.more-work {
+    width: 100%;
+    max-width: 1150px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 14px;
+
+    padding: 45px 20px 10px;
+
+    text-align: center;
+}
+
+.more-work p {
+    font-size: 15px;
+
+    color: var(--clr-text-secondary);
+}
+
+.more-work-link {
+    position: relative;
+
+    display: inline-block;
+
+    color: var(--clr-primary);
+
+    font-family: var(--font-heading);
+    font-size: clamp(24px, 4vw, 38px);
+    font-weight: var(--fw-bold);
+
+    letter-spacing: -1px;
+
+    transition:
+        color .3s ease,
+        transform .3s ease;
+}
+
+
+/* underline */
+
+.more-work-link::after {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+
+    width: 100%;
+    height: 3px;
+
+    background-color: var(--clr-primary);
+
+    transform: scaleX(.25);
+    transform-origin: left;
+
+    transition: transform .4s ease;
+}
+
+
+@media (hover: hover) and (pointer: fine) {
+
+    .more-work-link:hover {
+        color: var(--clr-primary-hover);
+
+        transform: translateY(-3px);
+    }
+
+    .more-work-link:hover::after {
+        transform: scaleX(1);
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    .more-work {
+        padding-top: 35px;
+    }
+
+    .more-work-link {
+        font-size: clamp(24px, 8vw, 32px);
+    }
+
+}
+
+/* =========================
+   (OTHER PROJECTS) DESKTOP HOVER
+========================= */
+
+@media (hover: hover) and (pointer: fine) {
+
+    .project-card:hover {
+        transform: translateY(-6px);
+
+        border-color: var(--clr-primary);
+
+        box-shadow: var(--shadow);
+    }
+
+    .project-card:hover .project-card-image img {
+        transform: scale(1.03);
+    }
+}
+
 
 @media (hover: hover) and (pointer: fine) {
 
@@ -445,7 +766,35 @@
 
 }
 
+/* =========================
+   (OTHER PROJRCTS) MOBILE
+========================= */
 
+@media (max-width: 768px) {
+
+    .other-projects {
+        gap: 24px;
+    }
+
+    .projects {
+        grid-template-columns: 1fr;
+
+        gap: 22px;
+    }
+
+    .project-card {
+        border-radius: 16px;
+    }
+
+    .project-card-content {
+        padding: 20px;
+    }
+
+    .project-card-content h4:first-child {
+        font-size: 18px;
+    }
+
+}
 
 /* =========================
    PROJECTS MOBILE
@@ -739,6 +1088,26 @@
         height: 6px;
     }
 
+    .project-reveal-left,
+    .project-reveal-center,
+    .project-reveal-right {
+        opacity: 0;
+
+        transform:
+            translateY(35px)
+            scale(.97);
+    }
+
+    .project-reveal-left.is-visible,
+    .project-reveal-center.is-visible,
+    .project-reveal-right.is-visible {
+        opacity: 1;
+
+        transform:
+            translateY(0)
+            scale(1);
+    }
+
 }
 
 
@@ -771,6 +1140,18 @@
 
     .featured-links {
         grid-template-columns: 1fr;
+    }
+
+}
+
+/* =========================
+   (OTHER PROJECTS) SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+
+    .project-card-content {
+        padding: 18px;
     }
 
 }

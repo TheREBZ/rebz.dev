@@ -249,3 +249,10 @@ div {
     }
 
 }
+
+#hero,
+#about,
+#projects,
+#contact {
+    scroll-margin-top: 90px;
+}
