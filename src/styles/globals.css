@@ -229,6 +229,18 @@ div {
     transition-delay: .4s;
 }
 
+/* Global styling for Featured Projects */
+.content {
+    width: 40%;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: space-between;
+
+    gap: 12px;
+}
+
 @media (max-width: 768px) {
 
     .reveal-left,

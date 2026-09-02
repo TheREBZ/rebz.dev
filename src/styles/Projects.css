@@ -1,15 +1,20 @@
-.projects-container{
+.projects-container {
     background-color: var(--clr-surface-alt);
+
     display: flex;
     flex-direction: column;
     align-items: center;
+
     padding: 60px 40px;
+
     gap: 50px;
 }
 
-.featured-projects h3{
-    font-size: 14px;
-}
+
+
+/* =========================
+   FEATURED PROJECTS
+========================= */
 
 .featured-projects {
     width: 100%;
@@ -21,7 +26,30 @@
     gap: 35px;
 }
 
-.renexa {
+.featured-projects h3 {
+    font-size: 14px;
+}
+
+
+
+/* =========================
+   FEATURE HEADING
+========================= */
+
+.feature-head {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+}
+
+
+
+/* =========================
+   FEATURED PROJECT LAYOUT
+========================= */
+
+.featured-project {
     width: 100%;
 
     display: flex;
@@ -31,7 +59,30 @@
     gap: 60px;
 }
 
-.renexa-content {
+
+
+/* =========================
+   FEATURED MEDIA
+========================= */
+
+.featured-media {
+    width: 55%;
+
+    min-width: 0;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+
+/* =========================
+   FEATURED CONTENT
+========================= */
+
+.featured-content {
     width: 40%;
 
     display: flex;
@@ -42,37 +93,55 @@
     gap: 12px;
 }
 
-.renexa-links{
-    padding-block: 20px;
-    display: flex;
-    gap: 20px;
+.featured-content ul {
+    padding-left: 18px;
 }
 
-.renexa-links a{
-    color: var(--clr-text-secondary);
-    font-weight: var(--fw-bold);
-}
 
-.renexa-tech{
+
+/* =========================
+   FEATURED TECH
+========================= */
+
+.featured-tech {
     display: flex;
+
     gap: 15px;
 }
 
-.renexa-images {
-    width: 55%;
-    min-width: 0;
+
+
+/* =========================
+   FEATURED LINKS
+========================= */
+
+.featured-links {
+    padding-block: 20px;
 
     display: flex;
-    flex-direction: column;
 
-    gap: 18px;
+    gap: 20px;
 }
+
+.featured-links a {
+    color: var(--clr-text-secondary);
+
+    font-weight: var(--fw-bold);
+}
+
+
+
+/* =========================
+   RENEXA SLIDER
+========================= */
 
 .renexa-slider {
     width: 100%;
+
     overflow: hidden;
 
     border-radius: 18px;
+
     border: 1px solid var(--clr-border);
 
     background-color: var(--clr-surface);
@@ -87,8 +156,15 @@
     object-fit: cover;
 }
 
+
+
+/* =========================
+   SLIDER CONTROLS
+========================= */
+
 .slider-controls {
     display: flex;
+
     justify-content: center;
     align-items: center;
 
@@ -97,9 +173,11 @@
 
 .slider-controls button {
     border: none;
+
     background: none;
 
     font-family: var(--font-heading);
+
     font-size: 20px;
 
     cursor: pointer;
@@ -107,9 +185,17 @@
     color: var(--clr-text-secondary);
 }
 
+
+
+/* =========================
+   SLIDER DOTS
+========================= */
+
 .slider-dots {
     display: flex;
+
     align-items: center;
+
     gap: 8px;
 }
 
@@ -121,14 +207,15 @@
 
     border-radius: 50%;
 
-    background-color: var(--clr-border) !important;
+    background-color:
+        var(--clr-border) !important;
 
     transition:
-    width .35s ease,
-    height .35s ease,
-    border-radius .35s ease,
-    background-color .35s ease,
-    transform .35s ease;
+        width .35s ease,
+        height .35s ease,
+        border-radius .35s ease,
+        background-color .35s ease,
+        transform .35s ease;
 }
 
 .active-dot {
@@ -136,29 +223,155 @@
 
     border-radius: 20px;
 
-    background-color: var(--clr-primary) !important;
+    background-color:
+        var(--clr-primary) !important;
 
     transform: scale(1.05);
 }
+
+
+
+/* =========================
+   SLIDE IMAGE
+========================= */
 
 .slide-image {
     width: 100%;
     height: 360px;
 
     display: block;
+
     object-fit: contain;
 
-    animation: slideFade 1.2s ease-in-out;
+    animation:
+        slideFade 1.2s ease-in-out;
 }
 
-.renexa-slider {
-    overflow: hidden;
+/* =========================
+   BATTLESHIP VIDEO
+========================= */
+
+.battleship-media {
+    position: relative;
 }
+
+.battleship-video {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+
+    display: block;
+
+    object-fit: cover;
+
+    border: 1px solid var(--clr-border);
+    border-radius: 18px;
+
+    background-color: var(--clr-text-primary);
+
+    box-shadow:
+        0 14px 35px rgba(24, 32, 43, .12);
+
+    transition:
+        transform .45s ease,
+        box-shadow .45s ease,
+        border-color .45s ease;
+}
+
+.battleship-video-wrapper {
+    position: relative;
+
+    width: 100%;
+}
+
+.gameplay-label {
+    position: absolute;
+
+    top: 16px;
+    left: 16px;
+
+    display: flex;
+    align-items: center;
+
+    gap: 8px;
+
+    padding: 7px 12px;
+
+    border-radius: 999px;
+
+    background-color: rgba(24, 32, 43, .75);
+
+    color: var(--clr-surface);
+
+    font-family: var(--font-heading);
+
+    font-size: 11px;
+    font-weight: var(--fw-bold);
+
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+
+    backdrop-filter: blur(8px);
+
+    pointer-events: none;
+}
+
+.gameplay-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background-color: var(--clr-success);
+
+    animation: gameplayPulse 1.8s ease-in-out infinite;
+}
+
+@keyframes gameplayPulse {
+
+    0%,
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: .45;
+        transform: scale(.75);
+    }
+
+}
+
+@keyframes slideFade {
+
+    from {
+        opacity: 0;
+
+        transform:
+            translateX(12px)
+            scale(.99);
+    }
+
+    to {
+        opacity: 1;
+
+        transform:
+            translateX(0)
+            scale(1);
+    }
+
+}
+
+
+
+/* =========================
+   FEATURED HOVER EFFECT
+========================= */
 
 .featured-effect {
     padding: 30px;
 
     border: 1px solid transparent;
+
     border-radius: 22px;
 
     transition:
@@ -168,56 +381,71 @@
         box-shadow .45s ease;
 }
 
-@keyframes slideFade {
-    from {
-        opacity: 0;
-        transform: translateX(12px) scale(.99);
-    }
 
-    to {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
 
 @media (hover: hover) and (pointer: fine) {
-    .featured-effect:hover {
-        /* transform: translateY(-6px) rotate(-0.3deg); */
 
+    .featured-effect:hover {
         background-color: var(--clr-primary);
 
         border-color: var(--clr-border);
 
-
-        box-shadow: 0 18px 40px rgba(24, 32, 43, .08);
+        box-shadow:
+            0 18px 40px
+            rgba(24, 32, 43, .08);
     }
 
-    .featured-effect:hover .slider-controls > button {
+
+    .featured-effect:hover
+    .slider-controls > button {
         color: white;
+
         border-color: white;
     }
 
+    .battleship:hover {
+        background-color: var(--clr-text-primary);
+    }
+
     .featured-effect:hover .dot {
-        background-color: rgba(255, 255, 255, .45) !important;
+        background-color:
+            rgba(255, 255, 255, .45)
+            !important;
     }
-    
+
+
     .featured-effect:hover .active-dot {
-        background-color: white !important;
+        background-color:
+            white !important;
     }
+
 
     .featured-effect:hover h1,
     .featured-effect:hover h2,
     .featured-effect:hover h3,
     .featured-effect:hover h4,
     .featured-effect:hover p,
-    .featured-effect:hover li{
+    .featured-effect:hover li {
         color: var(--clr-surface-alt);
     }
-    .featured-effect:hover a{
+
+
+    .featured-effect:hover a {
         color: var(--clr-surface);
     }
 
+    .battleship-video:hover {
+        transform: scale(1.015);
+    
+        border-color: var(--clr-primary);
+    
+        box-shadow:
+            0 20px 45px rgba(24, 32, 43, .18);
+    }
+
 }
+
+
 
 /* =========================
    PROJECTS MOBILE
@@ -233,24 +461,45 @@
         gap: 40px;
     }
 
+
     .projects-container > h2 {
         width: 100%;
+
         text-align: left;
     }
+
 
     .featured-projects {
         gap: 24px;
     }
 
+    /* BATTLESHIP VIDEO */
+
+.battleship-media {
+    width: 100%;
+}
+
+.battleship-video {
+    width: 100%;
+    height: auto;
+
+    aspect-ratio: 16 / 10;
+
+    object-fit: cover;
+
+    border-radius: 14px;
+
+    box-shadow:
+        0 10px 25px rgba(24, 32, 43, .10);
+}
+
 
     /* FEATURE HEADING */
 
     .feature-head {
-        display: flex;
-        flex-direction: column;
-
         gap: 8px;
     }
+
 
     .feature-head h3 {
         font-size: 12px;
@@ -258,11 +507,14 @@
         letter-spacing: 1.5px;
     }
 
+
     .feature-head h1 {
-        font-size: clamp(36px, 10vw, 48px);
+        font-size:
+            clamp(36px, 10vw, 48px);
 
         color: var(--clr-primary);
     }
+
 
     .feature-head p {
         font-size: 14px;
@@ -271,9 +523,10 @@
     }
 
 
-    /* PROJECT CARD */
 
-    .renexa {
+    /* FEATURED PROJECT */
+
+    .featured-project {
         width: 100%;
 
         flex-direction: column;
@@ -283,30 +536,131 @@
         gap: 28px;
     }
 
+
+
     .featured-effect {
         padding: 18px;
 
-        border-color: var(--clr-border);
+        border-color:
+            var(--clr-border);
 
-        background-color: var(--project-highlight-color);
+        background-color:
+            var(--project-highlight-color);
 
         border-radius: 20px;
     }
 
 
-    /* IMAGE / SLIDESHOW */
 
-    .renexa-images {
+    /* FEATURED MEDIA */
+
+    .featured-media {
         width: 100%;
 
         gap: 14px;
     }
+
+
+
+    /* FEATURED CONTENT */
+
+    .featured-content {
+        width: 100%;
+
+        gap: 16px;
+    }
+
+
+    .featured-content h4 {
+        margin-top: 4px;
+
+        font-size: 12px;
+
+        text-transform: uppercase;
+
+        letter-spacing: 1.5px;
+    }
+
+
+    .featured-content p,
+    .featured-content li {
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+
+    .featured-content ul {
+        display: flex;
+
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding-left: 18px;
+    }
+
+
+
+    /* TECH */
+
+    .featured-tech {
+        flex-direction: column;
+
+        gap: 8px;
+    }
+
+
+
+    /* LINKS */
+
+    .featured-links {
+        width: 100%;
+
+        display: grid;
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 12px;
+
+        padding-block: 8px 0;
+    }
+
+
+    .featured-links a {
+        min-height: 44px;
+
+        display: flex;
+
+        justify-content: center;
+        align-items: center;
+
+        padding: 10px 14px;
+
+        border:
+            1px solid
+            var(--clr-primary);
+
+        border-radius: 12px;
+
+        color: var(--clr-primary);
+
+        font-size: 14px;
+
+        text-align: center;
+    }
+
+
+
+    /* RENEXA SLIDER */
 
     .renexa-slider {
         width: 100%;
 
         border-radius: 14px;
     }
+
 
     .renexa-slider img,
     .slide-image {
@@ -320,6 +674,7 @@
     }
 
 
+
     /* SLIDER CONTROLS */
 
     .slider-controls {
@@ -328,22 +683,27 @@
         gap: 12px;
     }
 
+
     .slider-controls > button {
         width: 40px;
         height: 40px;
 
         display: flex;
+
         justify-content: center;
         align-items: center;
 
         flex-shrink: 0;
 
-        border: 1px solid var(--clr-border);
+        border:
+            1px solid
+            var(--clr-border);
 
         border-radius: 50%;
 
         font-size: 18px;
     }
+
 
     .slider-dots {
         flex: 1;
@@ -353,97 +713,39 @@
         gap: 6px;
     }
 
+
     .dot {
         width: 6px;
         height: 6px;
-        padding: 0;
     }
-    
+
+
     .active-dot {
         width: 18px;
         height: 6px;
     }
 
+    .gameplay-label {
+        top: 12px;
+        left: 12px;
 
-    /* PROJECT CONTENT */
+        padding: 6px 10px;
 
-    .renexa-content {
-        width: 100%;
-
-        gap: 16px;
+        font-size: 10px;
     }
 
-    .renexa-content h4 {
-        margin-top: 4px;
-
-        font-size: 12px;
-
-        text-transform: uppercase;
-
-        letter-spacing: 1.5px;
-    }
-
-    .renexa-content p,
-    .renexa-content li {
-        font-size: 14px;
-
-        line-height: 1.6;
-    }
-
-    .renexa-content ul {
-        display: flex;
-        flex-direction: column;
-
-        gap: 8px;
-
-        padding-left: 18px;
-    }
-
-
-    /* TECH */
-
-    .renexa-tech {
-        flex-direction: column;
-
-        gap: 8px;
-    }
-
-
-    /* LINKS */
-
-    .renexa-links {
-        width: 100%;
-
-        display: grid;
-
-        grid-template-columns: repeat(2, 1fr);
-
-        gap: 12px;
-
-        padding-block: 8px 0;
-    }
-
-    .renexa-links a {
-        min-height: 44px;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-
-        padding: 10px 14px;
-
-        border: 1px solid var(--clr-primary);
-
-        border-radius: 12px;
-
-        color: var(--clr-primary);
-
-        font-size: 14px;
-
-        text-align: center;
+    .gameplay-dot {
+        width: 6px;
+        height: 6px;
     }
 
 }
+
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
 
 @media (max-width: 480px) {
 
@@ -451,19 +753,23 @@
         padding: 14px;
     }
 
+
     .feature-head h1 {
         font-size: 38px;
     }
 
-    .renexa {
+
+    .featured-project {
         gap: 24px;
     }
 
-    .renexa-content {
+
+    .featured-content {
         gap: 14px;
     }
 
-    .renexa-links {
+
+    .featured-links {
         grid-template-columns: 1fr;
     }
 
