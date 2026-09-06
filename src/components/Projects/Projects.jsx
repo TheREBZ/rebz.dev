@@ -339,8 +339,15 @@ const Projects = () => {
                             <div className="project-card-content ecommerce-content">
                                 <h4>E-Commerce Store</h4>
                                 <h4>Tech</h4>
-                                <p>HTML • CSS • JavaScript • Git • GitHub</p>
+                                <p>React • Tailwind CSS • JavaScript • Git • GitHub</p>
                                 <div className="project-card-links">
+                                    <a
+                                        href="https://product-list-with-cart-mu-ten.vercel.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Live ↗
+                                    </a>
                                     <a
                                         href="https://github.com/TheREBZ/e-commerce-store.git"
                                         target="_blank"
