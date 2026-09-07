@@ -1,3 +1,5 @@
+import RebzLogo from "../RebzLogo/RebzLogo";
+
 import "../../styles/Nav.css";
 
 import { useState } from "react";
@@ -14,19 +16,14 @@ import {
   faXmark,
 } from "@fortawesome/free-solid-svg-icons";
 
-
 const Nav = () => {
-
   const [menuOpen, setMenuOpen] = useState(false);
-
 
   const closeMenu = () => {
     setMenuOpen(false);
   };
 
-
   return (
-
     <nav className="nav-container">
 
       <a
@@ -34,14 +31,11 @@ const Nav = () => {
         href="#hero"
         onClick={closeMenu}
       >
-        OSAZUWA KELVIN <strong>[REBZ]</strong>
+        OSAZUWA KELVIN <RebzLogo />
       </a>
 
-
       {/* DESKTOP NAV */}
-
       <div className="nav-content">
-
         <a href="#about" className="nav-link">
           About
         </a>
@@ -53,12 +47,9 @@ const Nav = () => {
         <a href="#contact" className="nav-link">
           Contact
         </a>
-
       </div>
 
-
       <div className="nav-icons">
-
         <a
           href="https://github.com/TheREBZ"
           className="github"
@@ -78,12 +69,9 @@ const Nav = () => {
         >
           <FontAwesomeIcon icon={faXTwitter} />
         </a>
-
       </div>
 
-
       {/* MOBILE HAMBURGER */}
-
       <button
         className="menu-button"
         onClick={() => setMenuOpen(true)}
@@ -92,9 +80,7 @@ const Nav = () => {
         <FontAwesomeIcon icon={faBars} />
       </button>
 
-
       {/* MOBILE MENU BACKDROP */}
-
       <div
         className={
           menuOpen
@@ -104,9 +90,7 @@ const Nav = () => {
         onClick={closeMenu}
       ></div>
 
-
       {/* MOBILE SIDE MENU */}
-
       <div
         className={
           menuOpen
@@ -114,7 +98,6 @@ const Nav = () => {
             : "mobile-menu"
         }
       >
-
         <button
           className="menu-close"
           onClick={closeMenu}
@@ -123,9 +106,7 @@ const Nav = () => {
           <FontAwesomeIcon icon={faXmark} />
         </button>
 
-
         <div className="mobile-menu-links">
-
           <a href="#about" onClick={closeMenu}>
             About
           </a>
@@ -137,19 +118,15 @@ const Nav = () => {
           <a href="#contact" onClick={closeMenu}>
             Contact
           </a>
-
         </div>
 
-
         <div className="mobile-social-links">
-
           <a
             href="https://github.com/TheREBZ"
             target="_blank"
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faGithub} />
-
             <span>GitHub</span>
           </a>
 
@@ -159,19 +136,12 @@ const Nav = () => {
             rel="noopener noreferrer"
           >
             <FontAwesomeIcon icon={faXTwitter} />
-
             <span>X</span>
           </a>
-
         </div>
-
       </div>
-
     </nav>
-
   );
-
 };
-
 
 export default Nav;

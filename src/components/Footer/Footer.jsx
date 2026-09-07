@@ -1,27 +1,26 @@
-import "../../styles/Footer.css"
+import RebzLogo from "../RebzLogo/RebzLogo";
+import "../../styles/Footer.css";
 
 const Footer = () => {
   return (
     <footer className="footer">
+      <div className="footer-container">
 
-            <div className="footer-container">
+        <a href="#hero" className="footer-logo">
+          <RebzLogo />
+        </a>
 
-                <a href="#hero" className="footer-logo">
-                    [REBZ]
-                </a>
+        <p className="footer-credit">
+          Designed & built by Kelvin
+        </p>
 
-                <p className="footer-credit">
-                    Designed & built by Kelvin
-                </p>
+        <p className="footer-copy">
+          © 2026
+        </p>
 
-                <p className="footer-copy">
-                    © 2026
-                </p>
+      </div>
+    </footer>
+  );
+};
 
-            </div>
-
-        </footer>
-  )
-}
-
-export default Footer
+export default Footer;
