@@ -19,8 +19,15 @@ const Hero = () => {
               web experiences that are easy on the eyes and genuinely simple to use.
           </p>
 
-          <div className="hero-buttons-container">
-              <button>Preview CV</button>
+          <div className="hero-cv-container">
+                <a
+                    href="/Osazuwa-Kelvin-CV.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hero-cv-button"
+                >
+                    Preview CV
+                </a>
           </div>
 
           </div>

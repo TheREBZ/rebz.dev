@@ -112,7 +112,7 @@
     gap: 20px;
 }
 
-.hero-buttons-container button {
+.hero-cv-container {
     padding: 10px 16px;
 
     font-family: var(--font-body);
@@ -138,7 +138,7 @@
         transform .3s ease;
 }
 
-.hero-buttons-container button:hover {
+.hero-cv-container:hover {
     background-color: var(--clr-primary);
 
     color: var(--clr-surface);
