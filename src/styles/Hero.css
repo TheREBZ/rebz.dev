@@ -9,7 +9,7 @@
         var(--section-padding)
         var(--page-padding);
 
-    background-color: var(--clr-surface-alt);
+    background: var(--clr-surface-alt);
 }
 
 

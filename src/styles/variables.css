@@ -12,6 +12,15 @@
   --clr-surface-alt: #A9C4E4;
   --project-highlight-color: rgba(248, 250, 252, .45);
 
+  /* Gradient background */
+  --gradient-background: linear-gradient(
+   180deg,
+   var(--clr-surface-alt) 0%,
+   #B9CEE5 35%,
+   #D0DEED 70%,
+   #EDF3F8 100%
+ );
+
   /* Text */
   --clr-text-primary: #18202B;
   --clr-text-secondary: #354052;

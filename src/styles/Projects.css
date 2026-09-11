@@ -1,5 +1,5 @@
 .projects-container {
-    background-color: var(--clr-surface-alt);
+    background: var(--gradient-background);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -448,7 +448,6 @@
 }
 
 
-/* When IntersectionObserver adds .is-visible */
 
 .project-reveal-left.is-visible,
 .project-reveal-center.is-visible,
