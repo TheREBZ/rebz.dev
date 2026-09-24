@@ -15,6 +15,7 @@ import battleshipVideo from "../../assets/battleship-game.mp4";
 import adviceAppImage from "../../assets/side-projects/advice-app.png";
 import ecommerceImage from "../../assets/side-projects/e-commerce.png";
 import urlShortenerImage from "../../assets/side-projects/url-shortener.png";
+import extensionApp from "../../assets/side-projects/extension-app.png";
 
 const Projects = () => {
 
@@ -313,6 +314,32 @@ const Projects = () => {
                         Other Projects
                     </h2>
                     <div className="projects">
+                        <div className="project-card extension-app reveal project-reveal-left">
+                            <div className="project-card-image extension-app-image">
+                                <img src={extensionApp}/>
+                            </div>
+                            <div className="project-card-content link-shortener-content">
+                                <h4>Browser Extension App</h4>
+                                <h4>Tech</h4>
+                                <p>HTML • CSS • JavaScript • Git • GitHub</p>
+                                <div className="project-card-links">
+                                    <a
+                                        href="https://browser-extension-app-orcin.vercel.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Live ↗
+                                    </a>
+                                    <a
+                                        href="https://github.com/TheREBZ/browser-extension-app.git"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        GitHub ↗
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
                         <div className="project-card link-shortener reveal project-reveal-left">
                             <div className="project-card-image link-shortener-image">
                                 <img src={urlShortenerImage}/>
@@ -367,6 +394,13 @@ const Projects = () => {
                                 <h4>Tech</h4>
                                 <p>HTML • CSS • JavaScript • REST API • Git • GitHub</p>
                                 <div className="project-card-links">
+                                    <a
+                                        href="https://advice-generator-one-taupe.vercel.app/"
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                    >
+                                        View Live ↗
+                                    </a>
                                     <a
                                         href="https://github.com/TheREBZ/advice-generator.git"
                                         target="_blank"

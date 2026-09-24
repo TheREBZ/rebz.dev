@@ -65,14 +65,10 @@
 }
 
 
-/* First line starts immediately */
-
 .hero-line-1 {
     animation-delay: .1s;
 }
 
-
-/* Second line follows the first */
 
 .hero-line-2 {
     animation-delay: .8s;
